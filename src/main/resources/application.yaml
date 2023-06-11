@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: gateway
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${gather.server.auth.url}
+          jwk-set-uri: ${gather.server.auth.url}/oauth2/jwks
+
+gather:
+  server:
+    auth:
+      url: "http://localhost:9000"
+    user:
+      url: "http://localhost:8090"
+    event:
+      url: "http://localhost:8082"
+    recommendation:
+      url: "http://localhost:8085"
+
+server:
+  port: 8080
