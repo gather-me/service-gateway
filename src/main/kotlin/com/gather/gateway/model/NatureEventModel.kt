@@ -5,6 +5,7 @@ import java.time.Instant
 
 data class NatureEventModel(
     val id: Long,
+    val eventType: EventType = EventType.Nature,
     val title: String,
     val description: String?,
     val creator: UserModel,

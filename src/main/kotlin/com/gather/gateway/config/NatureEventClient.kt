@@ -54,7 +54,7 @@ class NatureEventClient(
     fun enroll(userId: Long, eventId: Long): Mono<Void> =
         client
             .post()
-            .uri("users/{userId}/enroll/event/nature/{id}", userId)
+            .uri("users/{userId}/enroll/events/nature/{id}", userId,eventId)
             .retrieve()
             .bodyToMono()
 

@@ -5,6 +5,7 @@ import java.time.Instant
 
 data class StagePlayEventModel(
     val id: Long,
+    val eventType: EventType = EventType.StagePlay,
     val title: String,
     val description: String?,
     val creator: UserModel,

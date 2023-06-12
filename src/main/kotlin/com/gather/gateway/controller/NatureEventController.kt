@@ -48,7 +48,7 @@ class NatureEventController(
         eventClient.create(authentication.name.toLong(), body).awaitSingleOrNull()
     }
 
-    @PostMapping("users/me/enroll/event/nature/{id}")
+    @PostMapping("users/me/enroll/events/nature/{id}")
     suspend fun enroll(
         authentication: Authentication,
         @PathVariable id: Long

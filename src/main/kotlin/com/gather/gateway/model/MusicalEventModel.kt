@@ -5,6 +5,7 @@ import java.time.Instant
 
 data class MusicalEventModel(
     val id: Long,
+    val eventType: EventType = EventType.Musical,
     val title: String,
     val description: String?,
     val creator: UserModel,

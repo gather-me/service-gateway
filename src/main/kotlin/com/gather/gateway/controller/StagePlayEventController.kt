@@ -48,7 +48,7 @@ class StagePlayEventController(
         eventClient.create(authentication.name.toLong(), body).awaitSingleOrNull()
     }
 
-    @PostMapping("users/me/enroll/event/stagePlay/{id}")
+    @PostMapping("users/me/enroll/events/stagePlay/{id}")
     suspend fun enroll(
         authentication: Authentication,
         @PathVariable id: Long

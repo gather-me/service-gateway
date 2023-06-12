@@ -5,6 +5,7 @@ import java.time.Instant
 
 data class SportEventModel(
     val id: Long,
+    val eventType: EventType = EventType.Sport,
     val title: String,
     val description: String?,
     val creator: UserModel,

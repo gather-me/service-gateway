@@ -48,7 +48,7 @@ class SportEventController(
         eventClient.create(authentication.name.toLong(), body).awaitSingleOrNull()
     }
 
-    @PostMapping("users/me/enroll/event/sport/{id}")
+    @PostMapping("users/me/enroll/events/sport/{id}")
     suspend fun enroll(
         authentication: Authentication,
         @PathVariable id: Long

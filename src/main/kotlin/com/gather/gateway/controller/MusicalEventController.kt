@@ -48,7 +48,7 @@ class MusicalEventController(
         eventClient.create(authentication.name.toLong(), body).awaitSingleOrNull()
     }
 
-    @PostMapping("users/me/enroll/event/musical/{id}")
+    @PostMapping("users/me/enroll/events/musical/{id}")
     suspend fun enroll(
         authentication: Authentication,
         @PathVariable id: Long

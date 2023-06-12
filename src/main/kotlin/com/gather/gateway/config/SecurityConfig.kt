@@ -16,6 +16,8 @@ class SecurityConfig(
         http
             .authorizeHttpRequests()
             .requestMatchers("register").permitAll()
+                .and()
+                .authorizeHttpRequests()
             .anyRequest().authenticated()
             .and()
             .oauth2ResourceServer { it.jwt().jwkSetUri(jwkSetUri) }

@@ -19,15 +19,9 @@ class UserClient(
         client
             .post()
             .uri("/register")
+            .bodyValue(request)
             .retrieve()
             .bodyToMono()
-
-    fun getUserFollowings(userId: Long): Flux<UserModel> =
-        client
-            .get()
-            .uri("/users/{userId}/followings", userId)
-            .retrieve()
-            .bodyToFlux()
 
     fun getUserById(userId: Long): Mono<UserModel> =
         client

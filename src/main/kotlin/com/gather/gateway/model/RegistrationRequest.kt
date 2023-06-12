@@ -1,5 +1,4 @@
 package com.gather.gateway.model
-
 data class RegistrationRequest(
     val firstName: String,
     val secondName: String,
@@ -7,3 +6,4 @@ data class RegistrationRequest(
     val emailAddress: String,
     val password: String
 )
+

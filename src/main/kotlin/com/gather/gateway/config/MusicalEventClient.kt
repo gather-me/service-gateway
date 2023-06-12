@@ -54,7 +54,7 @@ class MusicalEventClient(
     fun enroll(userId: Long, eventId: Long): Mono<Void> =
         client
             .post()
-            .uri("users/{userId}/enroll/event/musical/{id}", userId)
+            .uri("users/{userId}/enroll/events/musical/{id}", userId, eventId)
             .retrieve()
             .bodyToMono()
 
