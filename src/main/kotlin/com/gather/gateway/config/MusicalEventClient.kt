@@ -63,7 +63,7 @@ class MusicalEventClient(
             .post()
             .uri("users/{creatorId}/events/musical/{eventId}/enrollment-requests/{userId}") {
                 it.queryParam("response", response)
-                    .build(userId)
+                    .build(creatorId, eventId, userId)
             }
             .retrieve()
             .bodyToMono()

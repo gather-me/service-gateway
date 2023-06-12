@@ -63,7 +63,7 @@ class NatureEventClient(
             .post()
             .uri("users/{creatorId}/events/nature/{eventId}/enrollment-requests/{userId}") {
                 it.queryParam("response", response)
-                    .build(userId)
+                    .build(creatorId, eventId, userId)
             }
             .retrieve()
             .bodyToMono()
