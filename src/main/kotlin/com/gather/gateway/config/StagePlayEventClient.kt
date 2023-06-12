@@ -54,7 +54,7 @@ class StagePlayEventClient(
     fun enroll(userId: Long, eventId: Long): Mono<Void> =
         client
             .post()
-            .uri("users/{userId}/enroll/events/stagePlay/{id}", userId,eventId)
+            .uri("users/{userId}/enroll/events/stagePlay/{id}", userId, eventId)
             .retrieve()
             .bodyToMono()
 
